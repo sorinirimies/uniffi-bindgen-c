@@ -4,6 +4,12 @@ All notable changes to this project are documented here. It is generated from
 [Conventional Commits](https://www.conventionalcommits.org) by
 [git-cliff](https://git-cliff.org) — do not edit it by hand.
 
+## [0.1.1](https://github.com/sorinirimies/uniffi-bindgen-c/compare/v0.1.0...v0.1.1) — 2026-11-08
+
+### 🐛 Bug fixes
+
+- Accept the toml versions uniffi_bindgen does ([`2029ca1`](https://github.com/sorinirimies/uniffi-bindgen-c/commit/2029ca185f5e926e037eddb28a014b184ef45a58))
+
 ## [0.1.0](https://github.com/sorinirimies/uniffi-bindgen-c/releases/tag/v0.1.0) — 2026-11-08
 
 ### ✨ Features
