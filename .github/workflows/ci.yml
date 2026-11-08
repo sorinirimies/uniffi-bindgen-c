@@ -37,6 +37,8 @@ jobs:
         run: nu scripts/ci/apt.nu
       - name: Quality gate
         run: nu scripts/ci/quality_gate.nu
+      - name: The published crates build with fresh dependencies (as cargo install does)
+        run: nu scripts/ci/fresh_install.nu
 
   # Generates C for uniffi's own fixture suite and the tour crate, compiles it as
   # C11 with warnings as errors (headers also as C++17) and runs the C tests, with
