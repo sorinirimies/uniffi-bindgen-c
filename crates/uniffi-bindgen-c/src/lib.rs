@@ -10,6 +10,7 @@
 //! The generated code calls the scaffolding through its C ABI, so you link the
 //! Rust library into your program like any other native library.
 
+pub mod bindgen;
 mod cli;
 mod codegen;
 mod config;

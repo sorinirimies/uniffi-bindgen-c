@@ -188,7 +188,8 @@ pub(crate) fn doc(docstring: Option<&str>, indent: usize) -> String {
             .strip_prefix(' ')
             .unwrap_or(line)
             .trim_end()
-            .replace("*/", "* /");
+            .replace("*/", "* /")
+            .replace("/*", "/ *");
         out.push_str(&format!("{pad} * {line}\n").replace(" * \n", " *\n"));
     }
     out.push_str(&format!("{pad} */\n"));
@@ -221,5 +222,6 @@ mod tests {
     #[test]
     fn doc_comment_cannot_end_the_comment_early() {
         assert_eq!(doc(Some("a */ b"), 0), "/**\n * a * / b\n */\n");
+        assert_eq!(doc(Some("a /* b"), 0), "/**\n * a / * b\n */\n");
     }
 }

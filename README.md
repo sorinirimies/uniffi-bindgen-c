@@ -5,7 +5,7 @@
 [![Fuzz](https://github.com/sorinirimies/uniffi-bindgen-c/actions/workflows/fuzz.yml/badge.svg)](https://github.com/sorinirimies/uniffi-bindgen-c/actions/workflows/fuzz.yml)
 [![crates.io](https://img.shields.io/crates/v/uniffi-bindgen-c.svg)](https://crates.io/crates/uniffi-bindgen-c)
 
-C11 bindings generator for [UniFFI](https://mozilla.github.io/uniffi-rs/) 0.32.
+C11 bindings generator for [UniFFI](https://mozilla.github.io/uniffi-rs/) 0.33.
 
 Point it at a library built with UniFFI and it writes a header and a source file per
 component, plus one shared header-only runtime. The generated code calls the scaffolding
@@ -183,7 +183,7 @@ just check-all    # fmt, clippy, tests, docs, Nushell script tests
 just e2e          # generate, compile and run the tour fixture's C test (--sanitize)
 just fixtures     # uniffi's fixture suite: generate, compile as C11 and C++17 (--sanitize)
 just fuzz-c       # fuzz the generated decoders (libFuzzer if clang has it)
-just vendor-fixtures ~/uniffi-rs v0.32.2   # re-vendor uniffi's fixtures
+just vendor-fixtures ~/uniffi-rs v0.33.0   # re-vendor uniffi's fixtures
 just release 0.1.0       # bump, changelog, tag, push → Release workflow
 just release-all 0.1.0   # … to GitHub and Gitea
 ```
@@ -193,7 +193,7 @@ Layout:
 ```
 crates/uniffi-bindgen-c/   the crate: codegen/ (the generator), runtime/ (the C runtime header), cli, config; tests/
 fixtures/tour/    a UniFFI crate that uses every feature, with the C test that runs against it (just e2e)
-fixtures/uniffi/  uniffi-rs v0.32.2 fixtures and examples (scripts/vendor_fixtures.nu), compiled by just fixtures
+fixtures/uniffi/  uniffi-rs v0.33.0 fixtures and examples (scripts/vendor_fixtures.nu), compiled by just fixtures
 fuzz/             cargo-fuzz targets (nightly), and fuzz/c: the generated decoders under libFuzzer
 scripts/          all tooling, Nushell only (justfile recipes run in nu too)
 ```
